@@ -15,7 +15,7 @@ The main reasons for this are:
 - Limit the number of review and approval points in the software delivery lifecycle.
 - Limit the number of systems/tools involved (Jira, Github and Confluence).
 - Limit the number of errors (ie wrong information) in current change process as the "truth" about what is both developed and configured is our source-code repository and thus could be defined as our CMDB.
-§
+
 
 ### Details
 
@@ -43,7 +43,9 @@ As this is a suggestion for a POC I want to keep the open feedback-loop short:
 ### Assumptions/Axioms for this proposal to work:
 - A Change is when something is merged to master
     - That means, when a PR is reviewed and approved and merged to master equals a Change. 
-    - One could argue that a change is when something is put into production, however, in this proposal this would be when the merge to master häppens. One advantage of this is that a master merge almoste exclusively happens after a SCR-approval. 
+    - One could argue that a change is when something is put into production, however, in this proposal this would be when the merge to master happens. One advantage of this is that a master merge almoste exclusively happens after a SCR-approval. 
+- A Release is when something is merged to master on a production configuration repo
+    - That means, when a PR is reviewed and approved and merged to production config master equals a Release. 
 - Github is our [CMDB](https://en.wikipedia.org/wiki/Configuration_management_database)
     - We would adopt that Github is our single point of truth when it comes to sofware and configuration. 
 
